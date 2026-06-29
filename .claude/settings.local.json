@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Join-Path *)",
+      "PowerShell(Get-Content *)"
+    ]
+  }
+}

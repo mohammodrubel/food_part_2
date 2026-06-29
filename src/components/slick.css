@@ -1,0 +1,18 @@
+.slick-slide {
+  transition: transform 0.3s ease;
+}
+
+.slick-center {
+  transform: scale(1);
+}
+
+.slick-slide:not(.slick-center) {
+  transform: scale(1); /* Keep same height & size */
+  opacity: 0.8; /* Optional: keep dim effect without shrinking */
+}
+
+
+.slick-slide img {
+  height: 100%;
+  object-fit: cover;
+}
