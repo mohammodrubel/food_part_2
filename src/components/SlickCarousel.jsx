@@ -8,6 +8,8 @@ import "./slick.css";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton"; // ✅ ShadCN Skeleton
 
+const fixUrl = (url) => (url ? url.replace(/([^:]\/)\/+/g, "$1") : url);
+
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -103,7 +105,7 @@ const SlickCarousel = () => {
       <div className="container mx-auto">
         <div className={`overflow-hidden rounded-xl`}>
           <Image
-            src={one?.photo?.original_url}
+            src={fixUrl(one?.photo?.original_url)}
             alt={one?.title || ""}
             width={1200}
             height={400}
@@ -125,7 +127,7 @@ const SlickCarousel = () => {
                 style={{ width: "100%" }}
               >
                 <Image
-                  src={item?.photo?.original_url}
+                  src={fixUrl(item?.photo?.original_url)}
                   alt={item?.title || ""}
                   width={1200}
                   height={400}
