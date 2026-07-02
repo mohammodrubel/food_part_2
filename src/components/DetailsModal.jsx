@@ -18,10 +18,20 @@ import remarkGfm from "remark-gfm";
 import AutoCurrencyFormatter from "./AutoCurrencyFormatter/AutoCurrencyFormatter";
 
 // ----------------------------------------------------------------------
-// Helper: format markdown safely (no innerHTML)
+// Helper: render product content (HTML from CMS, fallback to markdown)
 // ----------------------------------------------------------------------
+const hasHtmlTags = (str) => typeof str === "string" && /<\/?[a-z][\s\S]*>/i.test(str);
+
 const MarkdownContent = ({ content, className = "" }) => {
   if (!content) return null;
+  if (hasHtmlTags(content)) {
+    return (
+      <div
+        className={`prose prose-sm max-w-none ${className}`}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    );
+  }
   return (
     <div className={`prose prose-sm max-w-none ${className}`}>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
