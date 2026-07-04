@@ -46,13 +46,13 @@ function KeyFeatchers() {
 ];
 
     return (
-        <div className="container mx-auto my-10">
-            <h2 className="text-2xl capitalize font-bold text-center">Key <span className="underlined">Features</span></h2>
-            <div className="grid grid-cols-1  md:grid-cols-2 gap-10 lg:grid-cols-3 mx-auto">
+        <div className="container mx-auto my-10 px-4">
+            <h2 className="text-xl sm:text-2xl capitalize font-bold text-center">Key <span className="underlined">Features</span></h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 lg:grid-cols-3 mx-auto">
                 {myData?.map((item, index) => (
-                <div className="shadow rounded m-5" key={item?.id}>
-                    <div  className="flex flex-col m-5 items-center">
-                    <item.icon className="w-14 h-14 text-green-600 mt-1" />
+                <div className="shadow rounded m-2 sm:m-5" key={item?.id}>
+                    <div  className="flex flex-col m-3 sm:m-5 items-center">
+                    <item.icon className="w-10 h-10 sm:w-14 sm:h-14 text-green-600 mt-1" />
                     <div className="text-center">
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <p className="text-sm text-gray-600">{item.description}</p>

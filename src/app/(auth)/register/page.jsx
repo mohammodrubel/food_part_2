@@ -43,7 +43,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="relative flex justify-center flex-col items-center min-h-screen">
+    <div className="relative flex justify-center flex-col items-center min-h-screen px-4">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

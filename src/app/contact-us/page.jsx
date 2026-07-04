@@ -31,16 +31,16 @@ const { currentLang } = useLanguage()
   const t = useTranslation();
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden"  dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-12 max-w-6xl mx-auto">
           {/* Left side - Form */}
           <div className="lg:col-span-2">
-            <div className="mb-8">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="mb-6 sm:mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {t("navigation.Get", " Get in touch with Sales")}
                 <div className="w-16 h-1 bg-[#7CAE4D] mt-2"></div>
               </h1>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                 {t(
                   "navigation.desc",
                   "Want to learn more about how BestFoodImporters can help your business?<br />Fill in the form below and a member of our sales team will be in touch."
@@ -49,7 +49,7 @@ const { currentLang } = useLanguage()
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="fullName" className="sr-only">
                     Full Name
@@ -79,7 +79,7 @@ const { currentLang } = useLanguage()
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="company" className="sr-only">
                     Company

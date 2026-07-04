@@ -8,14 +8,14 @@ export default function AboutUsPage() {
   const t = useTranslation()
 
   return (
-    <main className="flex flex-col items-center justify-center py-12 md:py-24 lg:py-32 bg-white text-gray-900">
-      
+    <main className="flex flex-col items-center justify-center py-8 sm:py-12 md:py-24 lg:py-32 bg-white text-gray-900">
+
       {/* Intro Section */}
-      <section className="container px-4 md:px-6 text-center max-w-3xl space-y-6">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary">
+      <section className="container px-4 md:px-6 text-center max-w-3xl space-y-4 sm:space-y-6">
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-primary">
           {t("about.about_title", "Our Story: Freshness from Farm to Table")}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700">
+        <p className="text-base sm:text-lg md:text-xl text-gray-700">
           {t(
             "about.about_intro",
             "At Fruity Delights, we believe in bringing the freshest, most delicious fruits directly to your home. Our journey began with a simple passion for healthy living and a commitment to sustainable farming practices."
@@ -24,9 +24,9 @@ export default function AboutUsPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="container px-4 md:px-6 py-12 grid md:grid-cols-2 gap-8 items-center max-w-5xl">
+      <section className="container px-4 md:px-6 py-8 sm:py-12 grid md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-5xl">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight text-primary">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">
             {t("about.mission_title", "Our Mission")}
           </h2>
           <p className="text-gray-700 leading-relaxed">
@@ -54,7 +54,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Values Section */}
-      <section className="container px-4 md:px-6 py-12 grid md:grid-cols-2 gap-8 items-center max-w-5xl">
+      <section className="container px-4 md:px-6 py-8 sm:py-12 grid md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-5xl">
         <div className="flex justify-center md:order-last">
           <Image
             src={frute2}
@@ -65,7 +65,7 @@ export default function AboutUsPage() {
           />
         </div>
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight text-primary">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">
             {t("about.values_title", "Our Values")}
           </h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">

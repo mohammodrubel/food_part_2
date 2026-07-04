@@ -214,19 +214,19 @@ export default function DeliveryPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-8 sm:py-12">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
+      <div className="text-center mb-8 sm:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
           {deliveryData.header.title}
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
           {deliveryData.header.desc}
         </p>
       </div>
 
       {/* Quick Facts */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
         {deliveryData.quickFacts.map((fact, index) => {
           const Icon = fact.icon;
           return (
@@ -243,10 +243,10 @@ export default function DeliveryPage() {
 
       {/* Delivery Zones */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("delivery.zones.title", "Delivery Zones & Pricing")}
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {deliveryData.zones.map((zone, index) => (
             <Card key={index} className="relative">
               <CardHeader>
@@ -293,10 +293,10 @@ export default function DeliveryPage() {
 
       {/* Time Slots */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("delivery.times.title", "Available Time Slots")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {deliveryData.timeSlots.map((slot, index) => (
             <Card
               key={index}
@@ -317,10 +317,10 @@ export default function DeliveryPage() {
 
       {/* Delivery Process */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("delivery.process.title", "How It Works")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {deliveryData.processSteps.map((step) => (
             <div key={step.step} className="text-center">
               <div className="w-12 h-12 rounded-full text-primary-foreground bg-[#42b883] flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -335,7 +335,7 @@ export default function DeliveryPage() {
 
       {/* Special Services */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("delivery.services.title", "Special Services")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -368,7 +368,7 @@ export default function DeliveryPage() {
 
       {/* Important Information */}
       <section>
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("delivery.info.title", "Important Information")}
         </h2>
         <Card>

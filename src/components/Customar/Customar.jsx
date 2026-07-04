@@ -24,10 +24,10 @@ function Customar() {
 const t = useTranslation();
 const { currentLang } = useLanguage();
     return (
-        <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20" dir={currentLang === "ar" ? "rtl" : "ltr"}>
-            <div className="container mx-auto sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-10 sm:py-20" dir={currentLang === "ar" ? "rtl" : "ltr"}>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"> */}
-                <h1 className="text-2xl font-bold text-gray-700 mb-4">
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">
                     {t("navigation.client", "Meet Some of Our Clients")}
                 </h1>
 

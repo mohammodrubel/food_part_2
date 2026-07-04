@@ -93,10 +93,10 @@ const OnSaleProduct = () => {
     >
       <div className="mb-6 p-4 bg-white rounded-2xl shadow-sm">
         {/* MAIN GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-stretch">
 
           {/* LEFT: BANNER (NO EMPTY SPACE) */}
-          <div className="lg:col-span-2 flex flex-col gap-4 h-full">
+          <div className="md:col-span-3 lg:col-span-2 flex md:flex-col gap-4 h-full overflow-x-auto md:overflow-visible">
             {bannerPhoto.map((item) => {
               const imageSrc =
                 item?.media?.[0]?.original_url ||
@@ -124,17 +124,17 @@ const OnSaleProduct = () => {
           </div>
 
           {/* RIGHT: PRODUCTS */}
-          <div className="lg:col-span-10 flex flex-col">
+          <div className="md:col-span-9 lg:col-span-10 flex flex-col">
             {/* HEADER */}
             <div className="flex items-center justify-between mb-5">
-              <h2 className="font-bold text-2xl bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
+              <h2 className="font-bold text-xl sm:text-2xl bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
                 {t("navigation.Sale", "On Sale")}
               </h2>
               <div className="h-0.5 w-12 bg-red-500 rounded-full hidden sm:block"></div>
             </div>
 
             {/* PRODUCT GRID */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 flex-grow">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-5 flex-grow">
               {onSaleProduct.slice(0, 8).map((product) => (
                 <Product
                   key={product.id}

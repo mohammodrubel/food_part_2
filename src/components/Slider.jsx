@@ -43,7 +43,7 @@
 //                 <div className="p-2 h-[500px]">
 //                   <Card className="h-full gap-2 py-0 w-full rounded-2xl overflow-hidden flex flex-col">
 //                     {/* Image skeleton */}
-//                     <Skeleton className="h-[300px] w-full rounded-t-2xl" />
+//                     <Skeleton className="h-[240px] sm:h-[280px] md:h-[300px] w-full rounded-t-2xl" />
 
 //                     {/* Content skeleton */}
 //                     <div className="p-5 flex-grow flex flex-col">
@@ -105,7 +105,7 @@
 //                   <div className="p-2 h-[500px]">
 //                     <Card className="h-full gap-2 py-0 w-full rounded-2xl overflow-hidden flex flex-col">
 //                       {/* Image Section */}
-//                       <div className="relative h-[300px] w-full flex-shrink-0">
+//                       <div className="relative h-[240px] sm:h-[280px] md:h-[300px] w-full flex-shrink-0">
 //                         {item?.photo?.original_url && (
 //                           <Image
 //                             src={item.photo.original_url}
@@ -239,12 +239,12 @@ export function CarouselPlugin({ data = [], loading = false }) {
             {[...Array(4)].map((_, i) => (
               <CarouselItem
                 key={i}
-                className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4"
+                className="basis-full sm:basis-full md:basis-1/2 xl:basis-1/4"
               >
-                <div className="p-2 h-[500px]">
+                <div className="p-2 h-[450px] sm:h-[480px] md:h-[500px]">
                   <Card className="h-full gap-2 py-0 w-full rounded-2xl overflow-hidden flex flex-col">
                     {/* Image skeleton */}
-                    <Skeleton className="h-[300px] w-full rounded-t-2xl" />
+                    <Skeleton className="h-[240px] sm:h-[280px] md:h-[300px] w-full rounded-t-2xl" />
 
                     {/* Content skeleton */}
                     <div className="p-5 flex-grow flex flex-col">
@@ -295,13 +295,13 @@ export function CarouselPlugin({ data = [], loading = false }) {
             return (
               <CarouselItem
                 key={item?.id}
-                className="sm:basis-1/1 md:basis-1/2 xl:basis-1/4"
+                className="basis-full sm:basis-full md:basis-1/2 xl:basis-1/4"
                >
                 <Link href={`/blog/${item?.id}`} >
-                  <div className="p-2 h-[500px]" >
+                  <div className="p-2 h-[450px] sm:h-[480px] md:h-[500px]" >
                     <Card className="h-full gap-2 py-0 w-full rounded-2xl overflow-hidden flex flex-col">
                       {/* Image Section */}
-                      <div className="relative h-[300px] w-full flex-shrink-0">
+                      <div className="relative h-[240px] sm:h-[280px] md:h-[300px] w-full flex-shrink-0">
                         {item?.photo?.original_url && (
                           <Image
                             src={item.photo.original_url}

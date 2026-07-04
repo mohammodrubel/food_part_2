@@ -26,7 +26,7 @@ function ProductHeader({ search, setSearch, categoryData ,setSelectCategory}) {
   const { currentLang } = useLanguage(); 
   return (
     <div className="relative" dir={currentLang === "ar" ? "rtl" : "ltr"}>
-      <div className="p-5 border rounded-2xl flex items-center gap-5">
+      <div className="p-3 sm:p-5 border rounded-2xl flex items-center gap-2 sm:gap-5">
         {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"

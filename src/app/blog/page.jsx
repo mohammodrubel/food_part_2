@@ -194,7 +194,7 @@ function Page() {
   if (!blog?.data?.length) return <div>No blogs found</div>;
 
   return (
-    <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mx-auto" dir={currentLang === "ar" ? "rtl" : "ltr"}>
+    <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto px-4" dir={currentLang === "ar" ? "rtl" : "ltr"}>
       {blog.data.map((item) => {
         const cleanDescription = getTranslated(item, "description")
           ?.replace(/<[^>]*>/g, "")
@@ -205,7 +205,7 @@ function Page() {
             <Link href={`/blog/${item.id}`}>
               <Card className="h-full gap-0 py-0 w-full rounded-2xl overflow-hidden flex flex-col">
                 {/* Image Section */}
-                <div className="relative h-[300px] w-full flex-shrink-0">
+                <div className="relative h-[220px] sm:h-[260px] md:h-[300px] w-full flex-shrink-0">
                   {item?.photo?.original_url && (
                     <Image
                       src={item.photo.original_url}

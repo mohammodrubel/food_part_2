@@ -24,10 +24,10 @@ function ProductSidebar({ category, setSelectCategory }) {
   };
 
   return (
-    <div className='p-5 h-screen bg-white border rounded'>
+    <div className='p-3 sm:p-5 bg-white border rounded'>
       {/* Header */}
       <div className='flex justify-between items-center'>
-        <h2 className='text-2xl font-medium'>Filter</h2>
+        <h2 className='text-lg sm:text-2xl font-medium'>Filter</h2>
       </div>
 
       {/* Category Filter */}

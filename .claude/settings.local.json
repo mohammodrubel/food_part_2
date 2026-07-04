@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "PowerShell(Join-Path *)",
-      "PowerShell(Get-Content *)"
+      "PowerShell(Get-Content *)",
+      "Bash(npx next *)"
     ]
   }
 }

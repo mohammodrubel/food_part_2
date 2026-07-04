@@ -87,11 +87,11 @@ export function FeaturedProducts() {
 
   return (
     <div
-      className="container mx-auto py-10"
+      className="container mx-auto px-4 py-6 sm:py-10"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
       <div className="w-full">
-        <h2 className="text-2xl font-bold text-gray-700 mb-4">
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">
           {t("navigation.Featured", "Featured Products")}
         </h2>
 
@@ -112,7 +112,7 @@ export function FeaturedProducts() {
               {productData.map((item) => (
                 <CarouselItem
                   key={item.id}
-                  className="mt-2 mb-2 basis-1/2 md:basis-1/3 xl:basis-1/5 2xl:basis-1/7"
+                  className="mt-2 mb-2 basis-1/2 sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 2xl:basis-1/7"
                 >
                   <Product
                     product={{

@@ -44,8 +44,8 @@ export default function ProductPage() {
   if (!product) return <p className="text-center py-10">Product not found.</p>;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid lg:grid-cols-2 gap-8 mb-12">
+    <div className="container mx-auto px-4 py-6 sm:py-8">
+      <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
         {/* Product Images */}
         <div className="space-y-4">
           <div className="aspect-square relative overflow-hidden rounded-lg bg-gray-100">
@@ -81,7 +81,7 @@ export default function ProductPage() {
         {/* Product Details */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-2">
               {product.data?.product?.name}
             </h1>
             <div className="flex items-center gap-2 mb-4">
@@ -100,7 +100,7 @@ export default function ProductPage() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold">
+            <span className="text-2xl sm:text-3xl font-bold">
               ${product.data?.product?.price}
             </span>
           </div>

@@ -86,10 +86,10 @@ export default function ReturnPolicyPage() {
   ];
 
   return (
-    <div className="container mx-auto px-6 py-20">
+    <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-20">
       {/* Header */}
-      <div className="text-center mb-20">
-        <h1 className="text-5xl font-extrabold text-primary mb-6 tracking-tight drop-shadow-sm">
+      <div className="text-center mb-10 sm:mb-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary mb-4 sm:mb-6 tracking-tight drop-shadow-sm">
           {t("returnPrivacy.return_title", "Return Policy")}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -101,10 +101,10 @@ export default function ReturnPolicyPage() {
       </div>
 
       {/* Quality Guarantee Banner */}
-      <div className="relative bg-gradient-to-r from-[#defcf9] via-[#c8f6e7] to-[#93e4c1] rounded-3xl p-12 mb-20 shadow-xl overflow-hidden">
-        <div className="flex items-center justify-center mb-6 relative z-10">
-          <Shield className="h-12 w-12 text-primary mr-4" />
-          <h2 className="text-4xl font-bold text-primary">
+      <div className="relative bg-gradient-to-r from-[#defcf9] via-[#c8f6e7] to-[#93e4c1] rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-center mb-4 sm:mb-6 relative z-10">
+          <Shield className="h-8 w-8 sm:h-12 sm:w-12 text-primary mr-2 sm:mr-4" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
             {t("returnPrivacy.banner_title", "100% Freshness Guarantee")}
           </h2>
         </div>
@@ -120,10 +120,10 @@ export default function ReturnPolicyPage() {
 
       {/* Return Reasons */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 sm:mb-12 text-center">
           {t("returnReasons.Reasons_title", "Valid Return Reasons")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
           {returnReasons.map((item, index) => (
             <Card
               key={index}
@@ -169,10 +169,10 @@ export default function ReturnPolicyPage() {
 
       {/* Return Process */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 sm:mb-12 text-center">
           {t("returnProcess.returnProcesstitle", "How to Return")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12">
           {returnProcess.map((step, index) => (
             <div
               key={index}

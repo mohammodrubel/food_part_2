@@ -33,7 +33,7 @@ const t = useTranslation();
             <div className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {[...Array(2)].map((_, i) => (
-                        <Skeleton key={i} className="w-full h-64 rounded-lg" />
+                        <Skeleton key={i} className="w-full h-48 sm:h-64 rounded-lg" />
                     ))}
                 </div>
             </div>
@@ -66,16 +66,16 @@ const t = useTranslation();
     }
 
     return (
-        <section className="container mx-auto px-4 py-12">
-            <h2 className="text-3xl font-bold text-center mb-8"> {t("navigation.special", "Special Promotions")} </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="container mx-auto px-4 py-8 sm:py-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8"> {t("navigation.special", "Special Promotions")} </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {vendorImages.map((item) => (
                     <Link 
                         href={item?.url || '#'} 
                         key={item.id}
                         className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
-                        <div className="aspect-w-16 aspect-h-9 w-full h-64 md:h-80 relative">
+                        <div className="aspect-w-16 aspect-h-9 w-full h-48 sm:h-64 md:h-80 relative">
                             <Image
                                 src={item?.media[0]?.original_url || '/placeholder.jpg'}
                                 alt={item?.title || 'Promotion image'}

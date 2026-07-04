@@ -77,13 +77,13 @@ export default function PaymentPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-8 sm:py-12">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-4">
+      <div className="text-center mb-8 sm:mb-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
           {t("payment.title", "Payment Methods")}
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
           {t(
             "payment.subtitle",
             "We accept multiple secure payment options to make your fresh fruit shopping experience convenient and safe."
@@ -92,10 +92,10 @@ export default function PaymentPage() {
       </div>
 
       {/* Security Banner */}
-      <div className="bg-[#defcf9] rounded-lg p-6 mb-12">
+      <div className="bg-[#defcf9] rounded-lg p-4 sm:p-6 mb-8 sm:mb-12">
         <div className="flex items-center justify-center mb-4">
-          <Shield className="h-8 w-8 text-primary mr-3" />
-          <h2 className="text-2xl font-bold text-primary">
+          <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary mr-2 sm:mr-3" />
+          <h2 className="text-xl sm:text-2xl font-bold text-primary">
             {t("payment.secure_banner", "100% Secure Payments")}
           </h2>
         </div>
@@ -109,10 +109,10 @@ export default function PaymentPage() {
 
       {/* Security Features */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("payment.security_title", "Security Features")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {securityFeatures.map((feature, index) => (
             <Card key={index} className="bg-[#a8e6cf]">
               <CardContent className="pt-6">
@@ -133,10 +133,10 @@ export default function PaymentPage() {
 
       {/* Billing Information */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("payment.billing_title", "Billing Information")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {billingInfo.map((info, index) => (
             <Card key={index}>
               <CardHeader>
@@ -159,10 +159,10 @@ export default function PaymentPage() {
 
       {/* Payment Process */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("payment.process_title", "How Payment Works")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
             {
               step: "1",
@@ -198,7 +198,7 @@ export default function PaymentPage() {
 
       {/* Special Offers */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("payment.offers_title", "Payment Offers")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -252,7 +252,7 @@ export default function PaymentPage() {
 
       {/* FAQ */}
       <section>
-        <h2 className="text-3xl font-bold text-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
           {t("payment.faq_title", "Payment FAQ")}
         </h2>
         <Card>

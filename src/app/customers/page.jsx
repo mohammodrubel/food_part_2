@@ -76,14 +76,14 @@ function page() {
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-10 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
                 Meet Some of Our Clientss
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-base sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Discover how leading food businesses have transformed their supply chains through our comprehensive
                 import and distribution network.
               </p>
@@ -99,8 +99,8 @@ function page() {
                 </Link>
               </div>
             </div>
-            <div className="bg-white p-10 rounded-2xl shadow-lg">
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+            <div className="bg-white p-4 sm:p-10 rounded-2xl shadow-lg">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8">
                 {clientLogos.map((client, index) => (
                   <div
                     key={index}
@@ -118,16 +118,16 @@ function page() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Client Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Client Success Stories</h2>
+            <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Real stories from real clients who have achieved remarkable results through our platform
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {data?.data?.map((story) => (
               <div
                 key={story.id}
@@ -157,17 +157,17 @@ function page() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="mb-20 last:mb-0">
+            <div key={index} className="mb-12 sm:mb-20 last:mb-0">
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
                 <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <div className="p-8">
-                    <StarIcon className="h-8 w-8 text-yellow-400 mb-6" />
-                    <blockquote className="text-2xl md:text-3xl font-medium text-gray-900 italic mb-8 leading-relaxed">
+                  <div className="p-4 sm:p-8">
+                    <StarIcon className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400 mb-4 sm:mb-6" />
+                    <blockquote className="text-lg sm:text-2xl md:text-3xl font-medium text-gray-900 italic mb-6 sm:mb-8 leading-relaxed">
                       "{testimonial.quote}"
                     </blockquote>
                     <div>
@@ -197,12 +197,12 @@ function page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+      <section className="py-12 sm:py-24 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Ready to Transform Your Food Import Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-10 leading-relaxed">
             Join thousands of successful food businesses that have streamlined their supply chain with our platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
